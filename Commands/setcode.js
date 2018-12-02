@@ -7,7 +7,6 @@ module.exports = {
 
         if (!suffix) {
             msg.channel.send(`You must specify a mail code.`)
-            msg.react(`❌`)
             return;
         }
 
