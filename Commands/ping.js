@@ -4,7 +4,7 @@ module.exports = {
         
         let ping = Math.round(bot.ping)
 
-        msg.channel.send(`:ping_pong: Pong!: **${ping}ms**`)
+        msg.channel.send(`:ping_pong: Pong! **${ping}ms**`)
 
     }
   
