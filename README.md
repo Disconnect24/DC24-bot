@@ -18,7 +18,7 @@ If you'd like to add an error to our database, you may freely do that. Go to `/S
 
 ```
 {
-    "262102":{"description":"[WC24] Nintendo Channel Discontinued.", "fix":"Try repatching Nintendo Channel using the correct xdelta."},
+    "262102":{"description":"[WC24] Nintendo Channel Discontinued.", "fix":"Try repatching Nintendo Channel using the correct delta."},
     "error2":{"description":"error description", "fix":"error fix"}
 }
 ```
