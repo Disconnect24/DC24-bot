@@ -7,13 +7,11 @@ module.exports = {
 
         if (!suffix) {
             msg.channel.send(`You must specify an error.`)
-            msg.react(`❌`)
             return;
         }
 
         if (!errors[suffix]) {
             msg.channel.send(`That error was not found in the Disconnect24 database! However, feel free to add it using a PR or by DMing a developer!`)
-            msg.react(`❌`)
             return;
         }
 
@@ -25,7 +23,6 @@ module.exports = {
             .setFooter(`Do you feel this information isn't sufficient? Feel free to contribute by going to https://github.com/Disconnect24/DC24-bot.`)
 
         msg.channel.send(embed)
-        msg.react(`✅`)
 
     }
   
