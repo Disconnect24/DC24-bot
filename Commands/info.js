@@ -4,7 +4,7 @@ module.exports = {
 
         let embed = new Discord.RichEmbed()
             .setTitle(`Disconnect24 Bot - Information`)
-            .setDescription(`https://github.com/Disconnect24/Disconnect24-Bot`)
+            .setDescription(`https://github.com/Disconnect24/DC24-bot`)
             .addField(`Developed by:`, `TheMegaEagle`)
             .addField(`Contributors:`, `None yet, however feel free to add your name with a PR if you did something significant`)
             .addField(`Running since:`, `${bot.readyAt}`)
