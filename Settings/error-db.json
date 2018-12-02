@@ -3,5 +3,7 @@
 
     "252102":{"description":"[WC24] Check Mii Out Channel Discontinued.", "fix":"Wait for the development to finish."},
 
+    "when nc":{"description":"[DC24 DEV] When is the Nintendo channel releasing?", "fix":"***When it's ready.***"},
+    
     "117404":{"description":"[WC24] WiiConnect24 is temporarily unavailible.", "fix":"If you're getting this on the Nintendo Channel, wait until the patcher releases."}
 }
