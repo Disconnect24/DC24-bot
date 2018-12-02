@@ -1,3 +1,7 @@
 {
-    "262102":{"description":"[WC24] Nintendo Channel Discontinued.", "fix":"Try repatching Nintendo Channel using the correct xdelta."}
+    "262102":{"description":"[WC24] Nintendo Channel Discontinued.", "fix":"Try repatching Nintendo Channel using the correct xdelta."},
+
+    "252102":{"description":"[WC24] Check Mii Out Channel Discontinued.", "fix":"Wait for the RC24 development to finish."},
+
+    "117404":{"description":"[WC24] WiiConnect24 is temporarily unavailible.", "fix":"If you're getting this on the Nintendo Channel, wait untill the patcher releases."}
 }
