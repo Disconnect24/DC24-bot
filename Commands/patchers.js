@@ -12,7 +12,7 @@ module.exports = {
             .setColor(color)
             .setFooter(`More patchers will be added as they are developed.`)
 
-        msg.channel.send(embed)
+        msg.author.send(embed)
         msg.react(`✅`)
 
     }

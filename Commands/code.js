@@ -7,7 +7,6 @@ module.exports = {
 
         if (msg.channel.type === "dm") {
             msg.channel.send(`This command must be run in a server.`)
-            msg.react(`❌`)
             return;
         }
 
@@ -17,7 +16,6 @@ module.exports = {
 
             if (!codes[msg.author.id]) {
                 msg.channel.send(`You aren't in the database.`)
-                msg.react(`❌`)
                 return;
             }
 
@@ -26,14 +24,12 @@ module.exports = {
                 .setDescription(`Code: ${codes[msg.author.id].code}`) 
                 .setColor(color)
 
-            msg.channel.send(embed1)
-            msg.react(`✅`)
+            msg.channel.send(embed)
             return;
         }
 
         if (!codes[member.id]) {
             msg.channel.send(`This user isn't in the database.`)
-            msg.react(`❌`)
             return;
         }
 
@@ -43,7 +39,6 @@ module.exports = {
             .setColor(color)
 
         msg.channel.send(embed1)
-        msg.react(`✅`)
 
     }
   

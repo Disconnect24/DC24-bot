@@ -7,7 +7,6 @@ module.exports = {
 
         if (!suffix) {
             msg.channel.send(`You must specify a mail code.`)
-            msg.react(`❌`)
             return;
         }
 
@@ -21,14 +20,7 @@ module.exports = {
             if (err) console.log(err)
         })
 
-        msg.react(`✅`)
-
-        let embed = new Discord.RichEmbed()
-            .setTitle(`Success!`)
-            .setDescription(`Your mail code "${suffix}" can now be found with the \`${config.prefix}code\` command.`)
-            .setColor(color)
-
-        msg.channel.send(embed)
+        msg.channel.send(`Success! Your mail code "${suffix}" can now be found with the \`${config.prefix}code\` command.`)
 
     }
   

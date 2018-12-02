@@ -3,7 +3,7 @@
 ![Production List](https://img.shields.io/discord/397593815755522068.svg)
 
 ## How do I set this up?
-*An installation of NodeJS is required before you can successfully set this up. Nodemon is also required if you want automatic restarts.*
+*An installation of NodeJS is required before you can successfully set this up.*
 1. Create a clone of this Github Repository
 2. `cd` into the directory of the downloaded folder
 3. Generate a package.json file by running `npm init`, everything can be set to your preference; except the entry point must be `bot.js`.
