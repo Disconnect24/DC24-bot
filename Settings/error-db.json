@@ -7,5 +7,5 @@
     
     "117404":{"description":"[WC24] WiiConnect24 is temporarily unavailible.", "fix":"If you're getting this on the Nintendo Channel, wait until the patcher releases."},
     
-    "199-9999":{"description":"[Wii U] Launching a custom WUP without CFW", "fix":"Enable Mocha CFW or install CBHC and try again."},
+    "199-9999":{"description":"[Wii U] Launching a custom WUP without CFW", "fix":"Enable Mocha CFW or install CBHC and try again."}
 }
