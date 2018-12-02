@@ -6,7 +6,7 @@ module.exports = {
             .setTitle(`Disconnect24 Bot - Information`)
             .setDescription(`https://github.com/Disconnect24/DC24-bot`)
             .addField(`Developed by:`, `TheMegaEagle`)
-            .addField(`Contributors:`, `Currently only Wiiの間 and CornierKhan1.`)
+            .addField(`Contributors:`, `Wiiの間 and CornierKhan1-- Get added to this list by submitting a significant pull request!`)
             .addField(`Running since:`, `${bot.readyAt}`)
             .addField(`Bot Invite:`, `${config.botInvite}`)
             .addField(`Disconnect24 Invite:`, `${config.serverInvite}`)
