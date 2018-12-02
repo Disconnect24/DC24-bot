@@ -4,7 +4,7 @@ module.exports = {
 
         let embed = new Discord.RichEmbed()
             .setTitle(`Disconnect24 Bot - Command List`)
-            .setDescription(`https://github.com/Disconnect24/Disconnect24-Bot`)
+            .setDescription(`https://github.com/Disconnect24/DC24-bot`)
             .addField(`${config.prefix}help`, `Sends this command list.`)
             .addField(`${config.prefix}ping`, `Checks the bots connection.`)
             .addField(`${config.prefix}error`, `Looks up error info for a specified error.`)
