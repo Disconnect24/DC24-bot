@@ -1,4 +1,5 @@
 const Discord = new require(`discord.js`)
+const Enmap = require('enmap');
 const bot = new Discord.Client()
 
 const fs = require("fs");
