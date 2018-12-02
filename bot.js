@@ -3,8 +3,9 @@ const bot = new Discord.Client()
 
 const fs = require("fs");
 const config = JSON.parse(fs.readFileSync("./Settings/config.json", "utf8"))
+const auth = JSON.parse(fs.readFileSync("./Settings/auth.json", "utf8"))
 
-bot.login(config.token)
+bot.login(auth.token)
 
 var status = `Use ${config.prefix}help | Disconnect24 Bot`
 var color = `#BA68C8`
