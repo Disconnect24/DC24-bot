@@ -22,7 +22,7 @@ module.exports = {
             .setDescription(errors[suffix].description)
             .addField(`How to fix:`, errors[suffix].fix)
             .setColor(color)
-            .setFooter(`Do you feel this information isn't sufficient? Feel free to contribute by going to https://github.com/Disconnect24/Disconnect24-Bot.`)
+            .setFooter(`Do you feel this information isn't sufficient? Feel free to contribute by going to https://github.com/Disconnect24/DC24-bot.`)
 
         msg.channel.send(embed)
         msg.react(`✅`)
