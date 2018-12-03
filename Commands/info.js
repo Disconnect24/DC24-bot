@@ -8,7 +8,7 @@ module.exports = {
             .addField(`Developed by:`, `TheMegaEagle`)
             .addField(`Contributors:`, `Wiiの間 (Error Suggestions), CornierKhan1 (VPS), Apfel (Important Suggestions)`)
             .addField(`Running since:`, `${bot.readyAt}`)
-            .addField(`Bot Invite:`, `${config.botInvite}`)
+            .addField(`Bot Invite:`, `${<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Invite</a>}`)
             .addField(`Disconnect24 Invite:`, `${config.serverInvite}`)
             .setFooter(`Become a Contributor by submitting an important pull request to our github page! (https://github.com/Disconnect24/DC24-bot)`)
             .setColor(color)
