@@ -1,19 +1,11 @@
 module.exports = {
 
-    run: function(bot, config, msg, args, suffix, Discord, blError, gbError, dmError, owError, sfError, prError, otError, chError, mbError, names, sleep) {
+    run: function(bot, config, msg, args, suffix, Discord, color) {
 
         if (msg.channel.type === "dm") {
-              msg.react(`❌`)
-              msg.channel.send(dmError).then(function(m) {
-                sleep(2000)
-                m.delete()
-            })
+              msg.channel.send(`This command can not be run in DMs.`)
               return;
         }
-
-        if (msg.channel.type === "text") {
-            msg.react(`✅`)
-        } 
 
         const member = msg.mentions.members.first();
 
@@ -21,8 +13,7 @@ module.exports = {
             let ownAvatar = new Discord.RichEmbed()
                 .setTitle(msg.author.tag)
                 .setImage(msg.author.avatarURL)
-                .setColor(msg.member.highestRole.hexColor)
-                .setFooter(names)
+                .setColor(color)
             msg.channel.send(ownAvatar)
             return;
         }
@@ -31,8 +22,7 @@ module.exports = {
             let otherAvatar = new Discord.RichEmbed()
                 .setTitle(member.user.tag)
                 .setImage(member.user.avatarURL)
-                .setColor(member.highestRole.hexColor)
-                .setFooter(names)
+                .setColor(color)
             msg.channel.send(otherAvatar)
             return;
         }
