@@ -1,31 +1,17 @@
 module.exports = {
 
-    run: function(bot, config, msg, args, suffix, Discord, blError, gbError, dmError, owError, sfError, prError, otError, chError, mbError, names, sleep) {
+    run: function(bot, config, msg, args, suffix, Discord, color) {
 
         if (msg.channel.type === "dm") {
-              msg.react(`❌`)
-              msg.channel.send(dmError).then(function(m) {
-                sleep(2000)
-                m.delete()
-              })
+              msg.channel.send(`This command must be run in a server.`)
               return;
         }
-
-        if (msg.channel.type === "text") {
-            msg.react(`✅`)
-        } 
-
         
-
-        
-        let iconEmb = new Discord.RichEmbed()
+        let iconEmbed = new Discord.RichEmbed()
             .setTitle(msg.guild.name)
             .setImage(msg.guild.iconURL)
-            .setColor(msg.member.highestRole.hexColor)
-            .setFooter(names)
-        msg.channel.send(iconEmb)
-        return;
-        
+            .setColor(msg.member.highestRole.color)
+        msg.channel.send(iconEmbed)
 
     }
   
