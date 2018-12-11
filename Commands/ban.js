@@ -1,59 +1,44 @@
 module.exports = {
 
-  run: function(bot, config, msg, args, suffix, Discord, blError, gbError, dmError, owError, sfError, prError, otError, chError, mbError, names, sleep) {
+  run: function(bot, config, msg, args, suffix, Discord, color) {
 
-
+      if (msg.channel.type === "dm") return msg.channel.send(`This command must be run in a server.`)
 
       const member = msg.mentions.members.first();
       var unjoined = msg.content.split(" ").slice(2);
       let reason = unjoined.join(" ")
     
       if (!msg.member.permissions.has('BAN_MEMBERS')) {
-        msg.channel.send(prError).then(function(m) {
-          sleep(2000)
-          m.delete()
-      })
-        msg.react(`❌`)
+        msg.channel.send(`You do not have permission to ban members.`)
         return;
-      } else if (!member) {
-        msg.channel.send(mbError).then(function(m) {
-          sleep(2000)
-          m.delete()
-      })
-        msg.react(`❌`)
-        return;
-      } else if (msg.member.highestRole.position < member.highestRole.position) {
-        msg.channel.send(prError).then(function(m) {
-          sleep(2000)
-          m.delete()
-      })
-        msg.react(`❌`)
-        return;
-      } else if (msg.member.highestRole.position === member.highestRole.position) {
-        msg.channel.send(prError).then(function(m) {
-          sleep(2000)
-          m.delete()
-      })
-        msg.react(`❌`)
-        return;
-      } else if (msg.member.permissions.has('BAN_MEMBERS')) {
-        msg.react(`✅`)
+      } 
 
-        let banembed = new Discord.RichEmbed()
-            .setTitle(`EagleBot Moderation`)
-            .setDescription(`A member has been banned!`)
-            .addField(`Banned User:`, `${member.user.username}#${member.user.discriminator}`)
-            .addField(`Banned By:`, `${msg.author.tag}`)
-            .addField(`Reason:`, `${reason}`)
-            .setThumbnail(bot.user.avatarURL)
-            .setFooter(names)
-            .setColor(msg.member.highestRole.hexColor)
+      if (!member) {
+        msg.channel.send(`You must mention someone to run that command.`)
+        return;
+      } 
+    
+      if (msg.member.highestRole.position < member.highestRole.position) {
+        msg.channel.send(`Your role position is lower than the person you are trying to ban.`)
+        return;
+      } 
+      
+      if (msg.member.highestRole.position === member.highestRole.position) {
+        msg.channel.send(`Your role position is the same as the person you are trying to ban.`)
+        return;
+      } 
+    
+      if (msg.member.permissions.has('BAN_MEMBERS')) {
 
-        msg.channel.send(banembed)
+        let banEmbed = new Discord.RichEmbed()
+            .setTitle(`Success!`)
+            .setDescription(`${member.user.username}#${member.user.discriminator} was banned by ${msg.author.tag}.`)
+            .setColor(color)
 
-        member.send(`You were banned from **${msg.guild}** by **${msg.author.tag}**! Reason: ${reason}`)
-        member.ban({reason: `Banned by: ${msg.author.tag}, ${suffix}`})
-              .catch(error => msg.channel.send(otError))
+        msg.channel.send(banEmbed)
+
+        member.ban({reason: `Banned by: ${msg.author.tag}, ${reason}`})
+              .catch(error => msg.channel.send(`Unknown Error`))
 
       }
 
