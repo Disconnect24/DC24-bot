@@ -24,27 +24,21 @@ module.exports = {
       } 
     
       if (msg.member.highestRole.position === member.highestRole.position) {
-        msg.channel.send(prError)
-        msg.react(`❌`)
+        msg.channel.send(`You are the same role as the person you are trying to kick.`)
         return;
-      } else if (msg.member.permissions.has('KICK_MEMBERS')) {
-        msg.react(`✅`)
+      } 
+      
+      if (msg.member.permissions.has('KICK_MEMBERS')) {
+        
+        let kickEmbed = new Discord.RichEmbed()
+            .setTitle(`Success!`)
+            .setDescription(`${member.user.username}#${member.user.discriminator} was kicked by ${msg.author.tag}.`)
+            .setColor(color)
 
-        let kickembed = new Discord.RichEmbed()
-            .setTitle(`EagleBot Moderation`)
-            .setDescription(`A member has been kicked!`)
-            .addField(`Kicked User:`, `${member.user.username}#${member.user.discriminator}`)
-            .addField(`Kicked By:`, `${msg.author.tag}`)
-            .addField(`Reason:`, `${reason}`)
-            .setThumbnail(bot.user.avatarURL)
-            .setFooter(names)
-            .setColor(msg.member.highestRole.hexColor)
+        msg.channel.send(kickEmbed)
 
-        msg.channel.send(kickembed)
-
-        member.send(`You were kicked from **${msg.guild}** by **${msg.author.tag}**! Reason: ${reason}`)
-        member.kick(`Kicked by: ${msg.author.tag}, ${reason}`)
-              .catch(error => msg.author.send(otError))
+        member.kick({reason: `Kicked by: ${msg.author.tag}, ${reason}`})
+              .catch(error => msg.channel.send(`Unknown Error`))
 
       }
 
