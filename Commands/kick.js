@@ -1,38 +1,30 @@
 module.exports = {
 
-  run: function(bot, config, msg, args, suffix, Discord, blError, gbError, dmError, owError, sfError, prError, otError, chError, mbError, names, sleep) {
+  run: function(bot, config, msg, args, suffix, Discord, color) {
 
-
+      if (msg.channel.type === "dm") return msg.channel.send(`This command must be run in a server.`)
+    
       const member = msg.mentions.members.first();
       var unjoined = msg.content.split(" ").slice(2);
       let reason = unjoined.join(" ")
     
       if (!msg.member.permissions.has('KICK_MEMBERS')) {
-        msg.channel.send(prError).then(function(m) {
-          sleep(2000)
-          m.delete()
-      })
-        msg.react(`❌`)
+        msg.channel.send(`You do not have permission to kick.`)
         return;
-      } else if (!member) {
-        msg.channel.send(mbError).then(function(m) {
-          sleep(2000)
-          m.delete()
-      })
-        msg.react(`❌`)
+      }
+    
+      if (!member) {
+        msg.channel.send(`You must mention someone in order to use this command.`)
         return;
-      } else if (msg.member.highestRole.position < member.highestRole.position) {
-        msg.channel.send(prError).then(function(m) {
-          sleep(2000)
-          m.delete()
-      })
-        msg.react(`❌`)
+      } 
+    
+      if (msg.member.highestRole.position < member.highestRole.position) {
+        msg.channel.send(`The position of your role is lower than the person you are trying to kick.`)
         return;
-      } else if (msg.member.highestRole.position === member.highestRole.position) {
-        msg.channel.send(prError).then(function(m) {
-          sleep(2000)
-          m.delete()
-      })
+      } 
+    
+      if (msg.member.highestRole.position === member.highestRole.position) {
+        msg.channel.send(prError)
         msg.react(`❌`)
         return;
       } else if (msg.member.permissions.has('KICK_MEMBERS')) {
