@@ -3,7 +3,7 @@ module.exports = {
     run: function(bot, config, msg, args, suffix, Discord, color) {
 
         let embed = new Discord.RichEmbed()
-            .setTitle(`Disconnect24 Bot - Command List`)
+            .setTitle(`Disconnect24 Bot - MainCommand List`)
             .setDescription(`https://github.com/Disconnect24/DC24-bot`)
             .addField(`${config.prefix}help`, `Sends this command list.`)
             .addField(`${config.prefix}ping`, `Checks the bots connection.`)
@@ -16,6 +16,20 @@ module.exports = {
             .setColor(color)
 
         msg.author.send(embed)
+        
+        let embed2 = new Discord.RichEmbed()
+            .setTitle(`Disconnect24 Bot - Moderation Command List`)
+            .setDescription(`https://github.com/Disconnect24/DC24-bot`)
+            .addField(`${config.prefix}avatar`, `Gets the avatar or either yourself or a mentioned user.`)
+            .addField(`${config.prefix}ban`, `Bans a user mentioned, if you have permissions.`)
+            .addField(`${config.prefix}kick`, `Kicks a user mentioned, if you have permissions.`)
+            .addField(`${config.prefix}icon`, `Gets the icon of the server you are in.`)
+            .addField(`${config.prefix}server`, `Sends information about the server you are in.`)
+            .addField(`${config.prefix}user`, `Gets information of either yourself or a mentioned user.`)
+            .setColor(color)
+
+        msg.author.send(embed2)
+        
         msg.react(`✅`)
 
     }
