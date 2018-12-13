@@ -7,7 +7,7 @@ const auth = JSON.parse(fs.readFileSync("./Settings/auth.json", "utf8"))
 
 bot.login(auth.token)
 
-var status = `Use ${config.prefix}help | Disconnect24 Bot`
+var status = `Use ${config.prefix}help | DC24 Bot v1.2.0`
 var color = `#BA68C8`
 
 bot.on('ready', function() {
@@ -58,5 +58,29 @@ bot.on('message', function(msg) {
     
     if (command === "eval") {
         require(`./Commands/eval.js`).run(bot, config, msg, args, suffix, Discord, color)
+    }
+    
+    if (command === "avatar") {
+        require(`./Commands/avatar.js`).run(bot, config, msg, args, suffix, Discord, color)
+    }
+    
+    if (command === "ban") {
+        require(`./Commands/ban.js`).run(bot, config, msg, args, suffix, Discord, color)
+    }
+    
+    if (command === "kick") {
+        require(`./Commands/kick.js`).run(bot, config, msg, args, suffix, Discord, color)
+    }
+    
+    if (command === "icon") {
+        require(`./Commands/icon.js`).run(bot, config, msg, args, suffix, Discord, color)
+    }
+    
+    if (command === "server") {
+        require(`./Commands/server.js`).run(bot, config, msg, args, suffix, Discord, color)
+    }
+    
+    if (command === "user") {
+        require(`./Commands/user.js`).run(bot, config, msg, args, suffix, Discord, color)
     }
 })
