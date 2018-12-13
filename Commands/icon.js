@@ -10,7 +10,7 @@ module.exports = {
         let iconEmbed = new Discord.RichEmbed()
             .setTitle(msg.guild.name)
             .setImage(msg.guild.iconURL)
-            .setColor(msg.member.highestRole.color)
+            .setColor(color)
         msg.channel.send(iconEmbed)
 
     }
