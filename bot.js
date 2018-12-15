@@ -83,4 +83,8 @@ bot.on('message', function(msg) {
     if (command === "user") {
         require(`./Commands/user.js`).run(bot, config, msg, args, suffix, Discord, color)
     }
+    
+    if (command === "stats") {
+        require(`./Commands/stats.js`).run(bot, config, msg, args, suffix, Discord, color)
+    }
 })
