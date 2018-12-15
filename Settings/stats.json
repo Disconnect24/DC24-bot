@@ -1,12 +1,12 @@
 {
-   "mail": "✅ [Public Beta](http://mail.service.dc24.xyz)",
-   "cmoc": "⚠️ In Development",
-   "dc24channel": "✅ [Public Release](https://github.com/Disconnect24/dc24-channel)",
-   "nc": "⚠️ Release very soon:tm:",
-   "evc": "❌ Awaiting intermission",
-   "fore": "❌ Awaiting intermission",
-   "news": "❌ Awaiting intermission",
-   "speak": "❌ Awaiting intermission",
-   "miiverse": "❌ Development not supported",
-   "japan": "❌ Development not supported"
+   "cmoc": "⚠️ Currently being worked on.",
+   "dc24channel": "✅ [Beta available.](https://github.com/Disconnect24/dc24-channel)",
+   "evc": "❌ Might be supported in the future.",
+   "fore": "❌ Might be supported in the future.",
+   "japan": "❌ Won't be worked on."
+   "mail": "✅ [Beta available.](http://mail.service.dc24.xyz)",
+   "miiverse": "❌ Won't be worked on.",
+   "nc": "⚠️ Currently being worked on.",
+   "news": "❌ Might be supported in the future.",
+   "speak": "❌ Might be supported in the future."
 }
