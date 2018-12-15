@@ -7,16 +7,16 @@ module.exports = {
 
         let embed = new Discord.RichEmbed()
             .setTitle(`Disconnect24 Service Stats`)
-            .addField(`Mail:`, stats.mail)
-            .addField(`Check Mii Out Channel:`, stats.cmoc)
-            .addField(`Disconnect24 Channel:`, stats.dc24channel)
-            .addField(`Nintendo Channel:`, stats.nc)
-            .addField(`Everybody Votes Channel:`, stats.evc)
-            .addField(`Forecast Channel:`, stats.fore)
-            .addField(`News Channel:`, stats.news)
-            .addField(`Wii Speak Channel:`, stats.speak)
-            .addField(`Miiverse:`, stats.miiverse)
-            .addField(`Japanese Channels:`, stats.japan)
+            .setDescription(`Check Mii Out Channel: **{stats.cmoc}**\n
+            Disconnect24 Channel: **{stats.dc24channel}**\n
+            Everybody Votes Channel: **{stats.evc}**\n
+            Forecast Channel: **{stats.fore}**\n
+            Japanese Channels: **{stats.japan}**\n
+            Mail: **{stats.mail}**\n
+            Miiverse: **{stats.miiverse}**\n
+            News Channel: **{stats.news}**\n
+            Nintendo Channel: **{stats.nc}**\n
+            Wii Speak Channel: **{stats.speak}**`)
             .setColor(color)
 
         msg.channel.send(embed)
