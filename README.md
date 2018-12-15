@@ -12,6 +12,7 @@
 6. Run `start.bat`!
 
 Please note, if you decide to not use Nodemon, you will need to update `start.bat` to run `node bot.js` rather than `nodemon bot.js`.
+Linux users can just run the command in BASH.
 
 ## Do you want to submit an error?
 If you'd like to add an error to our database, you may freely do that. Go to `/Settings/error-db.json` to add errors. It must follow the format:
