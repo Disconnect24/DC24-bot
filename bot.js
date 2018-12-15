@@ -7,7 +7,7 @@ const auth = JSON.parse(fs.readFileSync("./Settings/auth.json", "utf8"))
 
 bot.login(auth.token)
 
-var status = `Use ${config.prefix}help | DC24 Bot v1.2.1`
+var status = `Use ${config.prefix}help | DC24 Bot v1.2.2`
 var color = `#BA68C8`
 
 bot.on('ready', function() {
