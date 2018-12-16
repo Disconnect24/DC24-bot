@@ -13,6 +13,7 @@ module.exports = {
             .addField(`${config.prefix}info`, `Sends information related to the bot.`)
             .addField(`${config.prefix}set-code`, `Allows you to add your Disconnect24 Wii Mail code to the database.`)
             .addField(`${config.prefix}stats`, `Gets the stats of DC24 services.`)
+            .addField(`${config.prefix}patch`, `Allows you to patch your nwc24msg.cfg for DC24 use.`)
             .addField(`${config.prefix}code`, `Allows you to fetch a Disconnect24 Wii Mail code of either yourself or a mentioned user.`)
             .setColor(color)
 
