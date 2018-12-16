@@ -7,7 +7,7 @@ const auth = JSON.parse(fs.readFileSync("./Settings/auth.json", "utf8"))
 
 bot.login(auth.token)
 
-var status = `Use ${config.prefix}help | DC24 Bot v1.3.3`
+var status = `Use ${config.prefix}help | DC24 Bot v1.4.0`
 var color = `#BA68C8`
 
 bot.on('ready', function() {
@@ -86,5 +86,9 @@ bot.on('message', function(msg) {
     
     if (command === "stats") {
         require(`./Commands/stats.js`).run(bot, config, msg, args, suffix, Discord, color)
+    }
+    
+    if (command === "patch") {
+        require(`./Commands/patch.js`).run(bot, config, msg, args, suffix, Discord, color)
     }
 })
