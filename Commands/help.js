@@ -25,7 +25,6 @@ module.exports = {
             .addField(`${config.prefix}avatar`, `Gets the avatar or either yourself or a mentioned user.`)
             .addField(`${config.prefix}ban`, `Bans a user mentioned, if you have permissions.`)
             .addField(`${config.prefix}kick`, `Kicks a user mentioned, if you have permissions.`)
-            .addField(`${config.prefix}icon`, `Gets the icon of the server you are in.`)
             .addField(`${config.prefix}server`, `Sends information about the server you are in.`)
             .addField(`${config.prefix}user`, `Gets information of either yourself or a mentioned user.`)
             .setColor(color)
