@@ -8,5 +8,6 @@
     "109139":{"description":"[WC24] WiiConnect24 is disabled.", "fix":"Go to Wii Settings > Internet Settings, and enable it."},
     "231000":{"description":"[WC24] Data could not be sent. Check your internet settings.", "fix":"If you're getting this on the Everybody Votes Channel, try restarting or if you get it again, repatch."}, 
     "FORE000006":{"description":"[WC24] Invalid data sent.", "fix":"Try unscrewing your battery cover on your Wii and put it back in a few hours later."},
-    "NEWS0000006":{"description":"[WC24] Invalid data sent.", "fix":"This means there too many news articles the Wii can support. Try again in a few hours or days."}
+    "NEWS0000006":{"description":"[WC24] Invalid data sent.", "fix":"This means there too many news articles the Wii can support. Try again in a few hours or days."},
+    "when cmoc":{"description":"[CMOC..?] Don't spam this kthx.", "fix":"*sigh* Please stop asking, or according to CornierKhan1, "Here's a fun game to play: Every time someone asks when cmoc is coming out, we'll put off the project for another month. :)""}
 }
