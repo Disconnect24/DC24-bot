@@ -12,8 +12,7 @@ module.exports = {
             .setColor(color)
             .setFooter(`Please enter these DNS settings in your Wii Settings to connect to Disconnect24.`)
 
-        msg.author.send(embed)
-        msg.react(`✅`)
+        msg.channel.send(embed)
 
     }
   
