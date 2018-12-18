@@ -20,7 +20,7 @@ module.exports = {
             if (err) console.log(err)
         })
 
-        msg.channel.send(`Success! Your mail code "${suffix}" can now be found with the \`${config.prefix}code\` command.`)
+        msg.channel.send(`Success! Your mail code "${suffix}" can now be found with the **\`${config.prefix}code\`** command.`)
 
     }
   
