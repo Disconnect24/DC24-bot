@@ -3,24 +3,26 @@ const request = require('request')
 module.exports = {
 
     run: function(bot, config, msg, args, suffix, Discord, color) {
+
+        if (msg.channel.type === "text") {
+            msg.channel.send(`This command must be run in DM, since your nwc24msg.cfg has private information.`)
+            msg.delete()
+            return;
+        }
         
         var sentfile = msg.attachments.first()
         if (!sentfile) return msg.channel.send(`You must attach a file.`)
+        if (sentfile.name !== "nwc24msg.cfg") return msg.channel.send(`The attached file was invalid.`)
         var url = sentfile.url
         
         let userConfig = request.get(url);
 
-        formData: {
-               uploaded_config: userConfig
-            }
-
         request.post({url:'https://mail.service.dc24.xyz/patch', formData: {uploaded_config: userConfig}}, function optionalCallback(err, httpResponse, body) {
               if (err) {
-                return console.error('upload failed:', err);
+                return msg.channel.send(`upload failed: ${err}`);
               }
-              console.log('Upload successful!  Server responded with:', body);
-              const buffer = request.body
-              const attachment = new Attachment(buffer, 'nwc24msg.cfg');
+              var buffer = Buffer.from(JSON.stringify(body));
+              const attachment = new Discord.Attachment(buffer, 'nwc24msg.cfg');
               msg.author.send(`Mail patching complete.`, attachment);
         });
 
