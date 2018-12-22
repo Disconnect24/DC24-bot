@@ -19,6 +19,12 @@ module.exports = {
             console.log(err);
          });
         
+
+        const buffer = fs.readFileSync('./Configs/nwc24msg.cfg');
+        const attachment = new Attachment(buffer, 'nwc24msg.cfg');
+        msg.author.send(`Mail patching complete.`, attachment);
+
+        
     }
   
   }
