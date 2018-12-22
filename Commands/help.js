@@ -13,6 +13,7 @@ module.exports = {
             .addField(`${config.prefix}info`, `Sends information related to the bot.`)
             .addField(`${config.prefix}set-code`, `Allows you to add your Disconnect24 Wii Mail code to the database.`)
             .addField(`${config.prefix}stats`, `Gets the stats of DC24 services.`)
+            .addField(`${config.prefix}patch`, `Allows you to patch your nwc24msg.cfg for DC24 use.`)
             .addField(`${config.prefix}code`, `Allows you to fetch a Disconnect24 Wii Mail code of either yourself or a mentioned user.`)
             .setColor(color)
 
@@ -24,7 +25,6 @@ module.exports = {
             .addField(`${config.prefix}avatar`, `Gets the avatar or either yourself or a mentioned user.`)
             .addField(`${config.prefix}ban`, `Bans a user mentioned, if you have permissions.`)
             .addField(`${config.prefix}kick`, `Kicks a user mentioned, if you have permissions.`)
-            .addField(`${config.prefix}icon`, `Gets the icon of the server you are in.`)
             .addField(`${config.prefix}server`, `Sends information about the server you are in.`)
             .addField(`${config.prefix}user`, `Gets information of either yourself or a mentioned user.`)
             .setColor(color)

@@ -7,15 +7,15 @@ const auth = JSON.parse(fs.readFileSync("./Settings/auth.json", "utf8"))
 
 bot.login(auth.token)
 
-var status = `Use ${config.prefix}help | DC24 Bot v1.3.3`
+var status = `Use ${config.prefix}help | DC24 Bot v1.4.0`
 var color = `#BA68C8`
 
-bot.on('ready', function() {
+bot.on('ready', async function() {
     console.log(`${bot.user.tag} is online and running!`)
     bot.user.setActivity(status)
 })
 
-bot.on('message', function(msg) {
+bot.on('message', async function(msg) {
     var command = msg.content.split(" ")[0].slice(config.prefix.length).toLowerCase()
     var args = msg.content.split(" ").slice(1);
     let suffix = args.join(" ")
@@ -86,5 +86,9 @@ bot.on('message', function(msg) {
     
     if (command === "stats") {
         require(`./Commands/stats.js`).run(bot, config, msg, args, suffix, Discord, color)
+    }
+    
+    if (command === "patch") {
+        require(`./Commands/patch.js`).run(bot, config, msg, args, suffix, Discord, color)
     }
 })

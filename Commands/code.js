@@ -19,7 +19,7 @@ module.exports = {
                 return;
             }
 
-            let embed1 = new Discord.RichEmbed()
+            let embed = new Discord.RichEmbed()
                 .setTitle(`${msg.author.username}'s Wii Mail Code`)
                 .setDescription(`Code: ${codes[msg.author.id].code}`) 
                 .setColor(color)
