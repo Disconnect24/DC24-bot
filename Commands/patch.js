@@ -12,7 +12,6 @@ module.exports = {
         
         var sentfile = msg.attachments.first()
         if (!sentfile) return msg.channel.send(`You must attach a file.`)
-        if (sentfile.name !== "nwc24msg.cfg") return msg.channel.send(`The attached file was invalid.`)
         var url = sentfile.url
         
         let userConfig = request.get(url);
