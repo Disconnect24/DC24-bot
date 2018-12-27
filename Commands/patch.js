@@ -16,10 +16,9 @@ module.exports = {
         
         let userConfig = request.get(url);
 
-        request.post({url:'https://mail.service.dc24.xyz/patch', headers: { 'Content-Type': 'multipart/form-data; boundary=----WebKitFormBoundarytUArugCRlbmMdP4C
-' }, formData: {uploaded_config: userConfig}}, function optionalCallback(err, httpResponse, body) {
+        request.post({url:'https://mail.service.dc24.xyz/patch', headers: { 'Content-Type': 'multipart/form-data', 'boundary': 'dc24bot' }, formData: {uploaded_config: userConfig}}, function optionalCallback(err, httpResponse, body) {
               if (err) {
-                return msg.channel.send(`upload failed: ${err}`);
+                return msg.channel.send(`Upload failed: ${err}`);
               }
               var buffer = Buffer.from(JSON.stringify(body));
               const attachment = new Discord.Attachment(buffer, 'nwc24msg.cfg');
