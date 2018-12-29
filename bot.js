@@ -94,4 +94,8 @@ bot.on('message', async function(msg) {
     if (command === "patch") {
         require(`./Commands/patch.js`).run(bot, config, msg, args, suffix, Discord, color)
     }
+    
+    if (command === "evc-suggest") {
+        require(`./Commands/evc-suggest.js`).run(bot, config, msg, args, suffix, Discord, color)
+    }
 })
