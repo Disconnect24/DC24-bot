@@ -9,7 +9,7 @@ module.exports = {
         .setTitle(`Disconnect24 Bot - Information`)
         .setDescription(`**[GitHub page](https://github.com/Disconnect24/DC24-bot)**
               Developed by: **<@${config.creatorID}>**\n
-              Contributors: **Wiiの間** (Error Suggestions), **CornierKhan1** (VPS), **Apfel** (Bot improvements), Spotlight (Minor Tweaks)
+              Contributors: **Wiiの間** (Error Suggestions), **CornierKhan1** (VPS), **Apfel** (Bot improvements), **FiSpotlight** (Minor Tweaks)
               Running since: **${bot.readyAt}**`)
         .addField(`Links`, `**[Bot Invite](${link})**\n**[Disconnect24 Invite](${config.serverInvite})**`)
         .setFooter(`Become a Contributor by submitting an important pull request to our GitHub page!`)
