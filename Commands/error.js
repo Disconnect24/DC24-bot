@@ -2,7 +2,7 @@ const fs = require("fs");
 const errors = JSON.parse(fs.readFileSync("./Settings/error-db.json", "utf8"))
 const error2 = JSON.parse(fs.readFileSync("./Settings/wiimmfi-error.json", "utf8"))
 
-const request = require('request')
+//const request = require('request')
 
 module.exports = {
 
@@ -21,8 +21,20 @@ module.exports = {
             
             loadJSON(link2, recieved, 'jsonp')
             function recieved(data) {
-                
+                fs.writeFile("./Settings/wiimmfi-error.json", JSON.stringify(data), (err) => {
+                    if (err) console.log(err)
+                })
             }
+            
+            const error2 = JSON.parse(fs.readFileSync("./Settings/wiimmfi-error.json", "utf8"))
+            
+            let embed1 = new Discord.RichEmbed()
+                  .setTitle(`Here is some info on error ${suffix}.`)
+                  .setDescription(error2[infolist].error)
+                  .setColor(color)
+                  .setFooter(`This error was found using the Wiimmfi API.`)
+
+              msg.channel.send(embed1)
             /*
             request.get({url: link}, function(err, response) {
               if (err) {
@@ -40,8 +52,8 @@ module.exports = {
             
             });
             */
-            msg.channel.send(`This error was not found in the DC24 database. However, feel free to check Wiimmfi! ${link}`)
-            return;
+            //msg.channel.send(`This error was not found in the DC24 database. However, feel free to check Wiimmfi! ${link}`)
+            //return;
         }
 
         let embed = new Discord.RichEmbed()
