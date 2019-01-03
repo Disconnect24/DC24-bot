@@ -1,5 +1,6 @@
 const fs = require("fs");
 const errors = JSON.parse(fs.readFileSync("./Settings/error-db.json", "utf8"))
+const error2 = JSON.parse(fs.readFileSync("./Settings/wiimmfi-error.json", "utf8"))
 
 const request = require('request')
 
@@ -17,6 +18,11 @@ module.exports = {
             //return;
             let link = "https://wiimmfi.de/error?e=" + suffix
             let link2 = "https://wiimmfi.de/error?e=" + suffix + "&m=json"
+            
+            loadJSON(link2, recieved, 'jsonp')
+            function recieved(data) {
+                
+            }
             /*
             request.get({url: link}, function(err, response) {
               if (err) {
