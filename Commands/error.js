@@ -15,8 +15,9 @@ module.exports = {
         if (!errors[suffix]) {
             //msg.channel.send(`That error was not found in the Disconnect24 database! However, feel free to add it using a PR or by DMing a developer!`)
             //return;
-            let link = "https://wiimmfi.de/error?e=" + suffix + "&m=json"
-            
+            let link = "https://wiimmfi.de/error?e=" + suffix
+            let link2 = "https://wiimmfi.de/error?e=" + suffix + "&m=json"
+            /*
             request.get({url: link}, function(err, response) {
               if (err) {
                 return msg.channel.send(`Unknown Error: ${err}`);
@@ -30,8 +31,11 @@ module.exports = {
                   .setFooter(`This error was found using the Wiimmfi API.`)
 
               msg.channel.send(embed1)
-
+            
             });
+            */
+            msg.channel.send(`This error was not found in the DC24 database. However, feel free to check Wiimmfi! ${link}`)
+            return;
         }
 
         let embed = new Discord.RichEmbed()
