@@ -7,7 +7,7 @@ const auth = JSON.parse(fs.readFileSync("./Settings/auth.json", "utf8"))
 
 bot.login(auth.token)
 
-var status = `Use ${config.prefix}help | DC24 Bot v1.4.4`
+var status = `Use ${config.prefix}help | DC24 Bot v1.5.0`
 var color = `#BA68C8`
 
 bot.on('ready', async function() {
@@ -51,6 +51,9 @@ bot.on('message', async function(msg) {
     if (command === "set-code") {
         require(`./Commands/setcode.js`).run(bot, config, msg, args, suffix, Discord, color)
     }
+    if (command === "remove-code") {
+        require(`./Commands/remove-code.js`).run(bot, config, msg, args, suffix, Discord, color)
+    }
 
     if (command === "code") {
         require(`./Commands/code.js`).run(bot, config, msg, args, suffix, Discord, color)
@@ -90,5 +93,9 @@ bot.on('message', async function(msg) {
     
     if (command === "patch") {
         require(`./Commands/patch.js`).run(bot, config, msg, args, suffix, Discord, color)
+    }
+    
+    if (command === "evc-suggest") {
+        require(`./Commands/evc-suggest.js`).run(bot, config, msg, args, suffix, Discord, color)
     }
 })
