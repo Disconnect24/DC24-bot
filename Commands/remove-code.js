@@ -1,5 +1,5 @@
 const fs = require("fs");
-const codes = JSON.parse(fs.readFileSync("./Configuration/mail-db.json", "utf8"))
+const codes = JSON.parse(fs.readFileSync("./Settings/mail-db.json", "utf8"))
   
 module.exports = {
   
