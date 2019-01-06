@@ -1,4 +1,6 @@
 {
-    "id": "id goes here",
-    "token": "token goes here"
+    "evc-id": "id goes here",
+    "evc-token": "token goes here",
+    "error-id": "id goes here",
+    "error-token": "token goes here"
 }
