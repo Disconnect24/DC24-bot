@@ -5,13 +5,13 @@ module.exports = {
   
       run: function(bot, config, msg, args, suffix, Discord, color) {
   
-          if (!accounts[msg.author.id]) {
+          if (!codes[msg.author.id]) {
               msg.channel.send(`You don't have a Mail Code attached to your account.`)
               return;
           }
   
           var code = msg.author.id
-          delete accounts[code]
+          delete codes[code]
   
           msg.channel.send(`Your Wii Mail Code is no longer attached.`)
           msg.react(`✅`)
