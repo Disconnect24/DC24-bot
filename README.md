@@ -15,13 +15,4 @@ Please note, if you decide to not use Nodemon, you will need to update `start.ba
 Linux users can just run the command in BASH.
 
 ## Do you want to submit an error?
-If you'd like to add an error to our database, you may freely do that. Go to `/Settings/error-db.json` to add errors. It must follow the format:
-
-```
-{
-    "262102":{"description":"[WC24] Nintendo Channel Discontinued.", "fix":"Try repatching Nintendo Channel using the correct delta."},
-    "error2":{"description":"error description", "fix":"error fix"}
-}
-```
-
-Please only try to create an error PR if you know how JSON files work. If you dont, please just create an issue, or talk to a developer.
+If you'd like to add an error to our database, you can now do it easier than before. Now, to add an error; all you have to do is run `d!error <error code>` on the error code you want to submit. If the error code isnt in the database, it will be submitted to the developers. No more need to hassle with JSON.
