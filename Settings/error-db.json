@@ -8,5 +8,9 @@
     "109139":{"description":"[WC24] WiiConnect24 is disabled.", "fix":"Go to Wii Settings > Internet Settings, and enable it."},
     "231000":{"description":"[WC24] Data could not be sent. Check your internet settings.", "fix":"If you're getting this on the Everybody Votes Channel, try restarting or if you get it again, repatch."}, 
     "FORE000006":{"description":"[WC24] Invalid data sent.", "fix":"Try unscrewing your battery cover on your Wii and put it back in a few hours later."},
-    "NEWS0000006":{"description":"[WC24] Invalid data sent.", "fix":"This means there too many news articles the Wii can support. Try again in a few hours or days."}
+    "NEWS0000006":{"description":"[WC24] Invalid data sent.", "fix":"This means there too many news articles the Wii can support. Try again later."},
+    "239001":{"description":"[WC24] Everybody Votes Channel Error", "fix":"Try repatching IOS 31, to see if that fixes the issue."},
+    "295500":{"description":"[WC24] Check Mii Out Channel Error", "fix":"This usually happens if you're not connected to internet. Connect to the internet and try again."},
+    "102032":{"description":"[WC24] Hash verification error", "fix":"Try repatching to see if that fixes the issue."},
+    "107305":{"description":"[WC24] HTTP Access Failed", "fix":"Try reconfiguring your internet connection."}
 }
