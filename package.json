@@ -6,12 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "TheMegaEagle and Apfel",
+  "author": "TheMegaEagle, Apfel",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^11.4.2",
     "discord.js-commando": "^0.10.0",
-    "erlpack": "^0.1.2",
+    "erlpack": "github:hammerandchisel/erlpack",
     "mysql": "^2.16.0",
     "nodemon": "^1.18.9",
     "request": "^2.88.0",
