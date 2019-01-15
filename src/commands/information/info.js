@@ -1,6 +1,6 @@
 module.exports = {
 
-  run: function(bot, config, msg, args, suffix, Discord, color) {
+  run: function(bot, config, msg, Discord, color) {
     bot.generateInvite(['VIEW_CHANNEL', 'SEND_MESSAGES', 'MANAGE_MESSAGES',
                         'EMBED_LINKS', 'ATTACH_FILES', 'READ_MESSAGE_HISTORY',
                         'USE_EXTERNAL_EMOJIS', 'ADD_REACTIONS'])

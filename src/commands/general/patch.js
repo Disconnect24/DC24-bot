@@ -2,7 +2,7 @@ const request = require('request')
 
 module.exports = {
 
-    run: function(bot, config, msg, args, suffix, Discord, color) {
+    run: function(msg, Discord) {
 
         if (msg.channel.type === "text") {
             msg.channel.send(`This command must be run in DM, since your nwc24msg.cfg has private information.`)

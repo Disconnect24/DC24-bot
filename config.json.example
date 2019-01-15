@@ -1,13 +1,20 @@
 {
     "auth": {
+        "database": {
+            "host": "hostname here",
+            "user": "username here",
+            "password": "password here",
+            "database": "database name here"
+        },
         "token": "yeah not for you"
     },
 
     "bot":{
-        "creatorID": "275775739998240769",
-        "khanID": "203447413644460034",
+        "color": "#BA68C8",
+        "owner": "275775739998240769",
         "prefix": "d!",
-        "serverInvite": "https://discord.gg/2BvqG9S"
+        "serverInvite": "https://discord.gg/2BvqG9S",
+        "status": "Use ${config.prefix}help | DC24 Bot v1.5.3"
     },
 
     "dns": {

@@ -3,7 +3,7 @@ const details = JSON.parse(fs.readFileSync("./Settings/webhook.json", "utf8"))
 
 module.exports = {
 
-    run: function(bot, config, msg, args, suffix, Discord, color) {
+    run: function(msg, suffix, Discord, color) {
         if (!suffix) {
             msg.channel.send(`You must have something written for your suggestion.`)
         }

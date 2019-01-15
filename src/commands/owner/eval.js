@@ -1,6 +1,6 @@
 module.exports = {
 
-    run: function(bot, config, msg, args, suffix, Discord) {
+    run: function(config, msg, suffix) {
     
         if (msg.author.id === config.creatorID) {
             if (msg.author.id !== config.creatorID) return;
