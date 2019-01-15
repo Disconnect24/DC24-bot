@@ -1,7 +1,7 @@
 import { createClient } from "redis";
 const client;
 
-class Database {
+export default class Database {
     Connect(config) {
         client = createClient({
             host: config.host,

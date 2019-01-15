@@ -1,8 +1,8 @@
 import { Client } from 'discord.js-commando';
-import { readFileSync } from "fs";
 import { join } from 'path';
 
-const config = JSON.parse(readFileSync("config.json", "utf8"));
+var config = Config.Load();
+
 const client = new Client({
 	owner: config.bot.owner,
 	commandPrefix: config.bot.prefix
