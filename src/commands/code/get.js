@@ -12,5 +12,7 @@ module.exports = class GetCodeCommand extends commando.Command {
         });
     }
 
-    async run(msg, args) { }
+    async run(msg, args) {
+        
+    }
 };

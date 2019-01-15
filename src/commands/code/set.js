@@ -1,6 +1,6 @@
 const commando = require('discord.js-commando');
 
-module.exports = class GetCodeCommand extends commando.Command {
+module.exports = class SetCodeCommand extends commando.Command {
     constructor(client) {
         super(client, {
             name: 'set-code',
