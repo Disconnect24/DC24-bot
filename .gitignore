@@ -1,5 +1,3 @@
-Settings/auth.json
-Settings/mail-db.json
-Settings/config.json
+config.json
 node_modules
 package-lock.json

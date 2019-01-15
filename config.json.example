@@ -1,0 +1,64 @@
+{
+    "auth": {
+        "token": "yeah not for you"
+    },
+
+    "bot":{
+        "creatorID": "275775739998240769",
+        "khanID": "203447413644460034",
+        "prefix": "d!",
+        "serverInvite": "https://discord.gg/2BvqG9S"
+    },
+
+    "dns": {
+        "primary": "35.231.85.122",
+        "secondary": "8.8.8.8"
+    },
+
+    "errors": {
+        "262102": { "description": "[WC24] Nintendo Channel Discontinued.", "fix": "Wait until the patcher releases." },
+        "252102": { "description": "[WC24] Check Mii Out Channel Discontinued.", "fix": "Wait for the development to finish." },
+        "when nc": { "description": "[DC24 DEV] When is the Nintendo channel releasing?", "fix": "When it's ready." },
+        "117404": { "description": "[WC24] WiiConnect24 is temporarily unavailable.", "fix": "If you're getting this on the Nintendo Channel, wait until the patcher releases." },
+        "199-9999": { "description": "[Wii U] An error has occured.", "fix": "This usually happens when launching custom WUPs. Enable Mocha CFW or install CBHC and try again." },
+        "103-9999": { "description": "[Wii U] A communication error has occured", "fix": "Make sure there is no network interference (proxying) occuring." },
+        "109139": { "description": "[WC24] WiiConnect24 is disabled.", "fix": "Go to Wii Settings > Internet Settings, and enable it." },
+        "231000": { "description": "[WC24] Data could not be sent. Check your internet settings.", "fix": "If you're getting this on the Everybody Votes Channel, try restarting or if you get it again, repatch." }, 
+        "FORE000006": { "description": "[WC24] Invalid data sent.", "fix": "Try unscrewing your battery cover on your Wii and put it back in a few hours later." },
+        "NEWS0000006": { "description": "[WC24] Invalid data sent.", "fix": "This means there too many news articles the Wii can support. Try again later." },
+        "239001": { "description": "[WC24] Everybody Votes Channel Error", "fix": "Try repatching IOS 31, to see if that fixes the issue." },
+        "295500": { "description": "[WC24] Check Mii Out Channel Error", "fix": "This usually happens if you're not connected to internet. Connect to the internet and try again." },
+        "102032": { "description": "[WC24] Hash verification error", "fix": "Try repatching to see if that fixes the issue." },
+        "107305": { "description": "[WC24] HTTP Access Failed", "fix": "Try reconfiguring your internet connection." }
+    },
+
+    "patchers": {
+        "mailPatcher1": "http://mail.service.dc24.xyz/",
+        "mailPatcher2": "https://github.com/Disconnect24/dc24-channel/releases",
+        "mailPatcher3": "https://github.com/Disconnect24/dc24-channel-shortcut/releases"
+    },
+
+    "mail-db": {
+
+    },
+
+    "stats": {
+        "cmoc": "⚠️ Currently being worked on.",
+        "dc24channel": "✅ [Beta available.](https://github.com/Disconnect24/dc24-channel)",
+        "evc": "❌ Might be supported in the future.",
+        "fore": "❌ Might be supported in the future.",
+        "japan": "❌ Won't be worked on.",
+        "mail": "✅ [Beta available.](http://mail.service.dc24.xyz)",
+        "miiverse": "❌ Won't be worked on.",
+        "nc": "⚠️ Currently being worked on.",
+        "news": "❌ Might be supported in the future.",
+        "speak": "❌ Might be supported in the future."
+    },
+
+    "webhook": {
+        "evcID": "id goes here",
+        "evcToken": "token goes here",
+        "errorID": "id goes here",
+        "errorToken": "token goes here"
+    }
+}
