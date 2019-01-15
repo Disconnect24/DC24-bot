@@ -1,6 +1,6 @@
-const commando = require('discord.js-commando');
+import { Command } from 'discord.js-commando';
 
-module.exports = class SetCodeCommand extends commando.Command {
+export default class SetCodeCommand extends Command {
     constructor(client) {
         super(client, {
             name: 'set-code',
@@ -12,5 +12,10 @@ module.exports = class SetCodeCommand extends commando.Command {
         });
     }
 
-    async run(msg, args) { }
+    async run(msg, args) {
+        if (args === null) return msg.reply(':warning: Please provide your code.');
+        Database.Get().set('code-' + msg.author.id, args, output);
+        if (output !== "OK")  return msg.reply(':x: An error occurred while setting the code.')
+        else return msg.reply(':white_check_mark: Your code has been set.');
+    }
 };

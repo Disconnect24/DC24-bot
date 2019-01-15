@@ -2,11 +2,11 @@
     "auth": {
         "database": {
             "host": "hostname here",
-            "user": "username here",
+            "port": "port here",
             "password": "password here",
-            "database": "database name here"
+            "database": "database number here"
         },
-        "token": "yeah not for you"
+        "token": "token here"
     },
 
     "bot":{

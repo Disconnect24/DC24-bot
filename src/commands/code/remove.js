@@ -1,6 +1,6 @@
-const commando = require('discord.js-commando');
+import { Command } from 'discord.js-commando';
 
-module.exports = class RemoveCodeCommand extends commando.Command {
+export default class RemoveCodeCommand extends Command {
     constructor(client) {
         super(client, {
             name: 'remove-code',
@@ -11,5 +11,9 @@ module.exports = class RemoveCodeCommand extends commando.Command {
         });
     }
 
-    async run(msg, args) { }
+    async run(msg, args) {
+        Database.Get().del('code-', msg.author.id, output);
+        if (output < 1) return msg.reply(':x: An error occurred when removing your code.');
+        else return msg.reply(':white_check_mark: Your code has been removed.');
+    }
 };
