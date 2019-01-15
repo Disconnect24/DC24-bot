@@ -14,7 +14,7 @@
         "owner": "275775739998240769",
         "prefix": "d!",
         "serverInvite": "https://discord.gg/2BvqG9S",
-        "status": "Use ${config.prefix}help | DC24 Bot v1.5.3"
+        "status": "Use ${config.prefix}help"
     },
 
     "dns": {
