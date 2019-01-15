@@ -1,8 +1,8 @@
-const commando = require('discord.js-commando');
+const commando  = require('discord.js-commando');
 const mysql     = require('mysql');
 const fs        = require("fs");
 const path      = require('path');
-const config    = JSON.parse(fs.readFileSync("./Settings/config.json", "utf8"));
+const config    = JSON.parse(fs.readFileSync("../config.json", "utf8"));
 
 const client = new commando.Client({
 	owner: config.bot.owner,
@@ -16,8 +16,15 @@ var database = mysql.createConnection({
     database    : config.auth.database.database
 });
 
+database.connect(function(err) {
+    if (err) {
+      console.error('An Error occurred when connecting to MySQL: ' + err.stack);
+      return;
+    }
+    console.log('Connected to MySQL with ID ' + connection.threadId);
+});
+
 client.on('ready', async function() {
-    database.connect();
     console.log(`${bot.user.tag} is online and running!`);
     bot.user.setActivity(config.bot.status);
 })
