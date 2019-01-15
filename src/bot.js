@@ -16,7 +16,6 @@ var database = mysql.createConnection({
     database    : config.auth.database.database
 });
 
-
 client.on('ready', async function() {
     database.connect();
     console.log(`${bot.user.tag} is online and running!`);

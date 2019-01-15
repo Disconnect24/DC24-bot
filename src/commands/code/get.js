@@ -8,16 +8,10 @@ module.exports = class GetCodeCommand extends commando.Command {
             group: 'code',
             description: 'Retrieves the code for the user.',
             examples: [ 'code <user>' ],
-            args : [ 
-                {
-                    key: 'user',
-                    prompt: 'What'
-            }]
-
         });
     }
 
     async run(msg, args) {
-
+        msg.reply("h");
     }
 };
