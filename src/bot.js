@@ -9,7 +9,16 @@ const client = new commando.Client({
 	commandPrefix: config.bot.prefix
 });
 
+var database = mysql.createConnection({
+    host        : config.auth.database.host,
+    user        : config.auth.database.user,
+    password    : config.auth.database.password,
+    database    : config.auth.database.database
+});
+
+
 client.on('ready', async function() {
+    database.connect();
     console.log(`${bot.user.tag} is online and running!`);
     bot.user.setActivity(config.bot.status);
 })
