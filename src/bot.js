@@ -2,7 +2,7 @@ const commando  = require('discord.js-commando');
 const mysql     = require('mysql');
 const fs        = require("fs");
 const path      = require('path');
-const config    = JSON.parse(fs.readFileSync("../config.json", "utf8"));
+const config    = JSON.parse(fs.readFileSync("config.json", "utf8"));
 
 const client = new commando.Client({
 	owner: config.bot.owner,
