@@ -3,16 +3,14 @@
 ![Production List](https://img.shields.io/discord/397593815755522068.svg)
 
 ## How do I set this up?
-*An installation of NodeJS is required before you can successfully set this up.*
-1. Create a clone of this Github Repository
-2. `cd` into the directory of the downloaded folder
-3. Generate a package.json file by running `npm init`, everything can be set to your preference; except the entry point must be `bot.js`.
-4. Install discord.js by running `npm install --save discord.js`.
-5. (optional) Install nodemon by running `npm install --save nodemon`.
-6. Run `start.bat`!
+*An installation of* **[Node.JS](https://nodejs.org)** *is required before you can successfully set this up.*
+*If you don't have all dependencies installed for buildiing, please check out [this](https://github.com/nodejs/node-gyp).*
 
-Please note, if you decide to not use Nodemon, you will need to update `start.bat` to run `node bot.js` rather than `nodemon bot.js`.
-Linux users can just run the command in BASH.
+1. Clone this repository.
+1. Go into the newly created directory.
+1. Execute `npm install` to install all dependencies.
+1. Now execute `npm start`.
+*You can also do `nodemon src/bot.js`, if you want to use [nodemon](https://github.com/remy/nodemon) instead of npm.*
 
 ## Do you want to submit an error?
-If you'd like to add an error to our database, you can now do it easier than before. Now, to add an error; all you have to do is run `d!error <error code>` on the error code you want to submit. If the error code isnt in the database, it will be submitted to the developers. No more need to hassle with JSON.
+If you'd like to add an error to our database, you can now do it easier than before. Now, to add an error; all you have to do is run `d!error <error code>` on the error code you want to submit, if that code hasn't been found yet. If the error code isn't in the database, it will be submitted to the developers.
