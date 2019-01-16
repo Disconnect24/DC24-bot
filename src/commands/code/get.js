@@ -9,14 +9,19 @@ export default class GetCodeCommand extends Command {
             memberName: 'get',
             description: 'Retrieves the code for the user.',
             examples: [ 'get <user>' ],
+            args: [
+                {
+                    key: 'user',
+                    prompt: 'Please enter a user to search for.',
+                    type: 'member'
+                }
+            ]
         });
     }
 
-    async run(msg, args) {
-        if (args === null) return msg.reply(':warning: Please provide a user.');
-        let member = msg.mentions.members.first();
-        Database.Get().get('code-' + member.id, output);
-        if (output === null)  return msg.reply(':x: The user **' + member.tag + '** have not set their code yet.')
-        else return msg.reply('The code for the user **' + member.tag + '** is ' + output + '`.');
+    async run(msg, { user }) {
+        Database.Get().get('code-' + user.id, output);
+        if (output === null)  return msg.reply(':x: The user **' + user.tag + '** have not set their code yet.')
+        else return msg.reply('The code for the user **' + user.tag + '** is ' + output + '`.');
     }
 };

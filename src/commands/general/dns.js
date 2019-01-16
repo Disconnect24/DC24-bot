@@ -11,7 +11,7 @@ export default class DNSCommand extends Command {
         });
     }
 
-    async run(msg, args) {
+    async run(msg) {
         var dns = Config.Get().dns;
         let embed = new RichEmbed()
             .setTitle('Here are the Disconnect24 DNSes.')

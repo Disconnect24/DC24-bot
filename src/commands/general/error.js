@@ -7,11 +7,18 @@ export default class ErrorCommand extends Command {
             name: 'error',
             aliases: [ 'errorcode' ],
             group: 'general',
-            description: 'Searches up error codes, and if we have informations, will help you fix your issue.'
+            description: 'Searches up error codes, and if we have informations, will help you fix your issue.',
+            args: [
+                {
+                    key: 'code',
+                    prompt: 'Please enter a code.',
+                    type: 'string'
+                }
+            ]
         });
     }
 
-    async run(msg, args) {
-                
+    async run(msg, { code }) {
+        request.get('https://wiimmfi.de/error?e='+code+'&m=json')
     }
 };

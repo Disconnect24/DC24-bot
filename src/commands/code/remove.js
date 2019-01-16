@@ -11,7 +11,7 @@ export default class RemoveCodeCommand extends Command {
         });
     }
 
-    async run(msg, args) {
+    async run(msg) {
         Database.Get().del('code-', msg.author.id, output);
         if (output < 1) return msg.reply(':x: An error occurred when removing your code.');
         else return msg.reply(':white_check_mark: Your code has been removed.');
