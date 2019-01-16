@@ -3,11 +3,17 @@
   "version": "2.0.0",
   "description": "A Discord-Bot, made for Disconnect24.",
   "main": "src/bot.js",
+  "homepage": "https://github.com/Disconnect24/DC24-bot",
+  "repository": "github:Disconnect24/DC24-bot",
+  "bugs": {
+    "url": "https://github.com/Disconnect24/DC24-bot/issues"
+  },
   "scripts": {
-    "start": "node src/bot"
+    "start": "node src/bot",
+    "nodemon": "nodemon src/bot.js"
   },
   "author": "TheMegaEagle, Apfel",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "discord.js": "^11.4.2",
     "discord.js-commando": "^0.10.0",
