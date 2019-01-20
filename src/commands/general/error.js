@@ -1,4 +1,5 @@
 const request = require('request')
+import { RichEmbed } from 'discord.js'
 import { Command } from 'discord.js-commando';
 
 export default class ErrorCommand extends Command {
@@ -19,6 +20,19 @@ export default class ErrorCommand extends Command {
     }
 
     async run(msg, { code }) {
-        request.get('https://wiimmfi.de/error?e='+code+'&m=json')
+        json = JSON.parse(request.get('https://wiimmfi.de/error?e='+code+'&m=json'));
+        if (json === null) {
+            return msg.reply(':x: We couldn`t find that error code.');
+        }
+        else if (json[0].found === 0)  {
+            return msg.reply(':x: We couldn`t find that error code.');
+        }
+        else {
+            embed = new RichEmbed().setTitle('Error description for Error ' + error[0].error)
+                .addField('Class info:', '**' + error[0].infolist[0].info + '** (' + error[0].infolist[0].name + ')', false)
+                .addField('Section info:', '**' + error[0].infolist[1].info + '** (' + error[0].infolist[1].name + ')', false)
+                .addField('Error info:', '**' + error[0].infolist[2].info + '** (' + error[0].infolist[2].name + ')', false);
+            return msg.reply({ embed });
+        }
     }
 };

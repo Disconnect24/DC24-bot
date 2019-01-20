@@ -13,11 +13,8 @@ export default class DNSCommand extends Command {
 
     async run(msg) {
         var dns = Config.Get().dns;
-        let embed = new RichEmbed()
-            .setTitle('Here are the Disconnect24 DNSes.')
-            .addField('Primary DNS:', dns.primary)
-            .addField('Secondary DNS:', dns.secondary)
-            .setColor(color)
+        let embed = new RichEmbed().setTitle('DNS values')
+            .addField('Primary DNS:', dns.primary).addField('Secondary DNS:', dns.secondary)
             .setFooter('Please enter these DNS settings in your Wii Settings to connect to Disconnect24.');
         return msg.reply({ embed });
     }
