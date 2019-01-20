@@ -12,5 +12,6 @@
     "239001":{"description":"[WC24] Everybody Votes Channel Error", "fix":"Try repatching IOS 31, to see if that fixes the issue."},
     "295500":{"description":"[WC24] Check Mii Out Channel Error", "fix":"This usually happens if you're not connected to internet. Connect to the internet and try again."},
     "102032":{"description":"[WC24] Hash verification error", "fix":"Try repatching to see if that fixes the issue."},
-    "107305":{"description":"[WC24] HTTP Access Failed", "fix":"Try reconfiguring your internet connection."}
+    "107305":{"description":"[WC24] HTTP Access Failed", "fix":"Try reconfiguring your internet connection."},
+    "32003":{"description":"[NAND] There is not enough memory to move or download the file.", "fix":"Try freeing space on your nand, or insert a SD card."},
 }
