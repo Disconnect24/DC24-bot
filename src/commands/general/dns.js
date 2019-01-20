@@ -1,5 +1,6 @@
 const commando = require('discord.js-commando');
 const discord = require('discord.js');
+const Config = require('../../managers/config')
 
 export default class DNSCommand extends commando.Command {
     constructor(client) {

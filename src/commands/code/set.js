@@ -1,4 +1,5 @@
 const commando = require('discord.js-commando');
+const Database = require('../../managers/database.js')
 
 export default class SetCodeCommand extends commando.Command {
     constructor(client) {

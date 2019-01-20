@@ -1,9 +1,9 @@
 const redis = require("redis");
 var redisClient;
 
-class Database {
+class database {
     Connect(config) {
-        redisClient = createClient({
+        redisClient = redis.createClient({
             host: config.host,
             port: config.port,
             password: config.password,

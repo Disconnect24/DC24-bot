@@ -1,13 +1,13 @@
 const fs = require('fs');
-var config;
+var configuration;
 
-class Config {
+class config {
     Load() {
-        config = JSON.parse(fs.readFileSync("config.json", "utf8"));
-        return config;
+        configuration = JSON.parse(fs.readFileSync("config.json", "utf8"));
+        return configuration;
     }
 
     Get() {
-        return config;
+        return configuration;
     }
 }
