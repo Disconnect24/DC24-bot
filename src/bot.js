@@ -1,6 +1,7 @@
 const commando = require('discord.js-commando');
 const path = require('path');
 const package = require('../package.json');
+const Config = require('./Managers/Config');
 
 var config = Config.Load();
 
