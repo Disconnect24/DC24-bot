@@ -1,6 +1,6 @@
-import { Command } from 'discord.js-commando';
+const commando = require('discord.js-commando');
 
-export default class SetCodeCommand extends Command {
+export default class SetCodeCommand extends commando.Command {
     constructor(client) {
         super(client, {
             name: 'set-code',

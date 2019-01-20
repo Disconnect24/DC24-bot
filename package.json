@@ -17,10 +17,8 @@
   "dependencies": {
     "discord.js": "^11.4.2",
     "discord.js-commando": "^0.10.0",
-    "erlpack": "github:hammerandchisel/erlpack",
     "nodemon": "^1.18.9",
     "redis": "^2.8.0",
-    "request": "^2.88.0",
-    "uws": "^99.0.0"
+    "request": "^2.88.0"
   }
 }

@@ -1,10 +1,10 @@
-import { Client } from 'discord.js-commando';
-import { join } from 'path';
-import { version }  from './package.json';
+const commando = require('discord.js-commando');
+const path = require('path');
+const package = require('../package.json');
 
 var config = Config.Load();
 
-const client = new Client({
+const client = new commando.Client({
 	owner: config.bot.owner,
 	commandPrefix: config.bot.prefix
 });
@@ -13,13 +13,13 @@ Database.Connect(config.auth.database);
 
 client.on('ready', async function() {
     console.log(`${bot.user.tag} is online and running!`);
-    bot.user.setActivity(config.bot.status + " | DC24 Bot v" + version);
+    bot.user.setActivity(config.bot.status + " | DC24 Bot v" + package.version);
 })
 
 client.registry
     .registerGroup('code', 'Code')
     .registerGroup('general', 'General')
     .registerDefaults()
-    .registerCommandsIn(join(__dirname, 'commands'));
+    .registerCommandsIn(path.join(__dirname, 'commands'));
 
 client.login(config.auth.token);

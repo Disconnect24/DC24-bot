@@ -1,9 +1,9 @@
-import { readFileSync } from "fs";
-const config;
+const fs = require('fs');
+var config;
 
-export default class Config {
+class Config {
     Load() {
-        config = JSON.parse(readFileSync("config.json", "utf8"));
+        config = JSON.parse(fs.readFileSync("config.json", "utf8"));
         return config;
     }
 

@@ -1,9 +1,9 @@
-import { createClient } from "redis";
-const client;
+const redis = require("redis");
+var redisClient;
 
-export default class Database {
+class Database {
     Connect(config) {
-        client = createClient({
+        redisClient = createClient({
             host: config.host,
             port: config.port,
             password: config.password,
@@ -12,6 +12,6 @@ export default class Database {
     }
 
     Get() {
-        return client;
+        return redisClient;
     }
 }

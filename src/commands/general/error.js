@@ -1,8 +1,8 @@
-const request = require('request')
-import { RichEmbed } from 'discord.js'
-import { Command } from 'discord.js-commando';
+const commando = require('discord.js-commando');
+const discord = require('discord.js');
+const request = require('request');
 
-export default class ErrorCommand extends Command {
+export default class ErrorCommand extends commando.Command {
     constructor(client) {
         super(client, {
             name: 'error',
@@ -28,7 +28,7 @@ export default class ErrorCommand extends Command {
             return msg.reply(':x: We couldn`t find that error code.');
         }
         else {
-            embed = new RichEmbed().setTitle('Error description for Error ' + error[0].error)
+            embed = new discord.RichEmbed().setTitle('Error description for Error ' + error[0].error)
                 .addField('Class info:', '**' + error[0].infolist[0].info + '** (' + error[0].infolist[0].name + ')', false)
                 .addField('Section info:', '**' + error[0].infolist[1].info + '** (' + error[0].infolist[1].name + ')', false)
                 .addField('Error info:', '**' + error[0].infolist[2].info + '** (' + error[0].infolist[2].name + ')', false);
