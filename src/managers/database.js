@@ -1,8 +1,8 @@
 const redis = require("redis");
 var redisClient;
 
-class database {
-    Connect(config) {
+module.exports = class Database {
+    connect(config) {
         redisClient = redis.createClient({
             host: config.host,
             port: config.port,
@@ -11,7 +11,7 @@ class database {
         });
     }
 
-    Get() {
+    get() {
         return redisClient;
     }
 }

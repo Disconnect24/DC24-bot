@@ -13,8 +13,7 @@
         "color": "#BA68C8",
         "owner": "275775739998240769",
         "prefix": "d!",
-        "serverInvite": "https://discord.gg/2BvqG9S",
-        "status": "Use ${config.prefix}help"
+        "serverInvite": "https://discord.gg/2BvqG9S"
     },
 
     "dns": {
@@ -30,7 +29,7 @@
         "199-9999": { "description": "[Wii U] An error has occured.", "fix": "This usually happens when launching custom WUPs. Enable Mocha CFW or install CBHC and try again." },
         "103-9999": { "description": "[Wii U] A communication error has occured", "fix": "Make sure there is no network interference (proxying) occuring." },
         "109139": { "description": "[WC24] WiiConnect24 is disabled.", "fix": "Go to Wii Settings > Internet Settings, and enable it." },
-        "231000": { "description": "[WC24] Data could not be sent. Check your internet settings.", "fix": "If you're getting this on the Everybody Votes Channel, try restarting or if you get it again, repatch." }, 
+        "231000": { "description": "[WC24] Data could not be sent. Check your internet settings.", "fix": "If you're getting this on the Everybody Votes Channel, try restarting or if you get it again, repatch." },
         "FORE000006": { "description": "[WC24] Invalid data sent.", "fix": "Try unscrewing your battery cover on your Wii and put it back in a few hours later." },
         "NEWS0000006": { "description": "[WC24] Invalid data sent.", "fix": "This means there too many news articles the Wii can support. Try again later." },
         "239001": { "description": "[WC24] Everybody Votes Channel Error", "fix": "Try repatching IOS 31, to see if that fixes the issue." },

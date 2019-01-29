@@ -1,7 +1,7 @@
 const commando = require('discord.js-commando');
 const Database = require('../../managers/database')
 
-export default class GetCodeCommand extends commando.Command {
+module.exports = class GetCodeCommand extends commando.Command {
     constructor(client) {
         super(client, {
             name: 'get-code',

@@ -9,11 +9,11 @@ module.exports = {
             msg.delete()
             return;
         }
-        
+
         var sentfile = msg.attachments.first()
         if (!sentfile) return msg.channel.send(`You must attach a file.`)
         var url = sentfile.url
-        
+
         let userConfig = request.get(url);
 
         request.post({url:'https://mail.service.dc24.xyz/patch', headers: { 'Content-Type': 'multipart/form-data', 'boundary': 'dc24bot' }, formData: {uploaded_config: userConfig}}, function optionalCallback(err, httpResponse, body) {
@@ -25,7 +25,7 @@ module.exports = {
               msg.author.send(`Mail patching complete.`, attachment);
         });
 
-        
+
     }
-  
+
   }

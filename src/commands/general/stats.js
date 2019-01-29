@@ -1,5 +1,6 @@
 const fs = require("fs");
-const stats = JSON.parse(fs.readFileSync("./Settings/stats.json", "utf8"))
+const Config = require('../../managers/config.js');
+const details = new Config().load.stats;
 
 module.exports = {
 
@@ -22,6 +23,5 @@ module.exports = {
         msg.channel.send(embed)
 
     }
-  
+
   }
-  

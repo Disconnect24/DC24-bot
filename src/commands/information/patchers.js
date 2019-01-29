@@ -1,5 +1,6 @@
 const fs = require("fs");
-const patchers = JSON.parse(fs.readFileSync("./Settings/patchers.json", "utf8"))
+const Config = require('../../managers/config.js');
+const details = new Config().load.patchers;
 
 module.exports = {
 
@@ -17,6 +18,4 @@ module.exports = {
         msg.react(`✅`)
 
     }
-  
   }
-  

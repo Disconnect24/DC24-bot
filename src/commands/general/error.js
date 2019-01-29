@@ -2,12 +2,13 @@ const commando = require('discord.js-commando');
 const discord = require('discord.js');
 const request = require('request');
 
-export default class ErrorCommand extends commando.Command {
+module.exports = class ErrorCommand extends commando.Command {
     constructor(client) {
         super(client, {
             name: 'error',
             aliases: [ 'errorcode' ],
             group: 'general',
+            memberName: 'error',
             description: 'Searches up error codes, and if we have informations, will help you fix your issue.',
             args: [
                 {
