@@ -1,6 +1,6 @@
 const commando = require('discord.js-commando');
 const discord = require('discord.js');
-const Config = require('../../managers/config')
+const config = require('../../managers/config');
 
 export default class DNSCommand extends commando.Command {
     constructor(client) {
@@ -13,7 +13,7 @@ export default class DNSCommand extends commando.Command {
     }
 
     async run(msg) {
-        let dns = Config.Get().dns;
+        let dns = config.Get().dns;
         let embed = new discord.RichEmbed().setTitle('DNS values')
             .addField('Primary DNS:', dns.primary).addField('Secondary DNS:', dns.secondary)
             .setFooter('Please enter these DNS settings in your Wii Settings to connect to Disconnect24.');
