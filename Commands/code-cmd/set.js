@@ -4,8 +4,11 @@ const codes = JSON.parse(fs.readFileSync("./Settings/mail-db.json", "utf8"))
 module.exports = {
 
     run: function(bot, config, msg, args, suffix, Discord, color) {
+        
+        var second = msg.content.split(" ").slice(2);
+        let input = second.join(" ")
 
-        if (!suffix) {
+        if (!input) {
             msg.channel.send(`You must specify a mail code.`)
             return;
         }
@@ -14,13 +17,13 @@ module.exports = {
             code: "N/A"
         }
 
-        codes[msg.author.id].code = suffix
+        codes[msg.author.id].code = input
 
         fs.writeFile("./Settings/mail-db.json", JSON.stringify(codes), (err) => {
             if (err) console.log(err)
         })
 
-        msg.channel.send(`Success! Your mail code "${suffix}" can now be found with the **\`${config.prefix}code\`** command.`)
+        msg.channel.send(`Success! Your mail code "${input}" can now be found with the **\`${config.prefix}code\`** command.`)
 
     }
   
