@@ -20,7 +20,7 @@ export default class ErrorCommand extends commando.Command {
     }
 
     async run(msg, { code }) {
-        json = JSON.parse(request.get('https://wiimmfi.de/error?e='+code+'&m=json'));
+        let json = JSON.parse(request.get('https://wiimmfi.de/error?e='+code+'&m=json'));
         if (json === null) {
             return msg.reply(':x: We couldn`t find that error code.');
         }
@@ -28,7 +28,7 @@ export default class ErrorCommand extends commando.Command {
             return msg.reply(':x: We couldn`t find that error code.');
         }
         else {
-            embed = new discord.RichEmbed().setTitle('Error description for Error ' + error[0].error)
+            let embed = new discord.RichEmbed().setTitle('Error description for Error ' + error[0].error)
                 .addField('Class info:', '**' + error[0].infolist[0].info + '** (' + error[0].infolist[0].name + ')', false)
                 .addField('Section info:', '**' + error[0].infolist[1].info + '** (' + error[0].infolist[1].name + ')', false)
                 .addField('Error info:', '**' + error[0].infolist[2].info + '** (' + error[0].infolist[2].name + ')', false);
