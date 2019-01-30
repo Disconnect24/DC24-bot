@@ -48,13 +48,6 @@ bot.on('message', async function(msg) {
         require(`./Commands/info.js`).run(bot, config, msg, args, suffix, Discord, color)
     }
 
-    if (command === "set-code") {
-        require(`./Commands/setcode.js`).run(bot, config, msg, args, suffix, Discord, color)
-    }
-    if (command === "remove-code") {
-        require(`./Commands/remove-code.js`).run(bot, config, msg, args, suffix, Discord, color)
-    }
-
     if (command === "code") {
         require(`./Commands/code.js`).run(bot, config, msg, args, suffix, Discord, color)
     }
