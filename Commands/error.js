@@ -12,9 +12,9 @@ module.exports = {
         }
 
         if (!errors[suffix]) {
-            const webhook1 = new Discord.WebhookClient(webhooks.errorID, webhooks.errorToken)
+            let botChannel = bot.channels.get('531596156229124106')
             msg.channel.send(`That error was not found in the Disconnect24 database! However, it will be added soon! This unknown error code has been reported to the developers.`)
-            webhook1.send(`Error ${suffix} was found by ${msg.author.tag} and is not currently in the database.`)
+            botChannel.send(`Error ${suffix} was found by ${msg.author.tag} and is not currently in the database.`)
             return;
         }
 

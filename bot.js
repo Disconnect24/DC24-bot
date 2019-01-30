@@ -7,7 +7,7 @@ const auth = JSON.parse(fs.readFileSync("./Settings/auth.json", "utf8"))
 
 bot.login(auth.token)
 
-var status = `Use ${config.prefix}help | DC24 Bot v1.5.3`
+var status = `Use ${config.prefix}help | DC24 Bot v1.6.0`
 var color = `#BA68C8`
 
 bot.on('ready', async function() {
@@ -25,6 +25,10 @@ bot.on('message', async function(msg) {
     }
 
     if (command === "patchers") {
+        require(`./Commands/patchers.js`).run(bot, config, msg, args, suffix, Discord, color)
+    }
+  
+    if (command === "guide") {
         require(`./Commands/patchers.js`).run(bot, config, msg, args, suffix, Discord, color)
     }
     
@@ -46,13 +50,6 @@ bot.on('message', async function(msg) {
 
     if (command === "info") {
         require(`./Commands/info.js`).run(bot, config, msg, args, suffix, Discord, color)
-    }
-
-    if (command === "set-code") {
-        require(`./Commands/setcode.js`).run(bot, config, msg, args, suffix, Discord, color)
-    }
-    if (command === "remove-code") {
-        require(`./Commands/remove-code.js`).run(bot, config, msg, args, suffix, Discord, color)
     }
 
     if (command === "code") {

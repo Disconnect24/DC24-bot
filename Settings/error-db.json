@@ -12,5 +12,15 @@
     "239001":{"description":"[WC24] Everybody Votes Channel Error", "fix":"Try repatching IOS 31, to see if that fixes the issue."},
     "295500":{"description":"[WC24] Check Mii Out Channel Error", "fix":"This usually happens if you're not connected to internet. Connect to the internet and try again."},
     "102032":{"description":"[WC24] Hash verification error", "fix":"Try repatching to see if that fixes the issue."},
-    "107305":{"description":"[WC24] HTTP Access Failed", "fix":"Try reconfiguring your internet connection."}
+    "107305":{"description":"[WC24] HTTP Access Failed", "fix":"Try reconfiguring your internet connection."},
+    "20100":{"description":"[WC24] Unable to connect to the internet", "fix":"First try restarting your Wii, then try reconfiguring your connection."},
+    "51331":{"description":"[WC24] Network Connection Error", "fix":"Try reconfiguring your WLAN settings on both your router and on the Wii."},
+    "201301":{"description":"[WC24] Wii Shop Channel Error", "fix":"Unknown Error Related to the Wii Shop Channel. Try rebooting to see if that helps."},
+    "20110":{"description":"[WFC] Patching Error", "fix":"Try repatching your ISO for the service of your choice."},
+    "204019":{"description":"[WC24] Wii Shop Channel Error", "fix":"The Wii Shop Channel is currently under heavy load. Please try again later."},
+    "107006":{"description":"[WC24] Wii Mail Error", "fix":"The mail attachment is too large to load."},
+    "85010":{"description":"[WFC] Matchmaking Error", "fix":"The matchmaking server is currently down. Please try again later."},
+    "354606":{"description":"[WC24] Wii no Ma Discontinued.", "fix":"There are currently no plans for DC24 to revive this service. Please hit the F for Wii no Ma."},
+    "52430":{"description":"[WC24] Network Error", "fix":"There is an issue with your proxy. Please check your proxy settings."},
+    "105409":{"description":"[WC24] SSL Error", "fix":"There is currently no known fix. However, try reconfiguring your DNS settings."}
 }
