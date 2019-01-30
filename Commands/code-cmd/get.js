@@ -4,6 +4,10 @@ const codes = JSON.parse(fs.readFileSync("./Settings/mail-db.json", "utf8"))
 module.exports = {
 
     run: function(bot, config, msg, args, suffix, Discord, color) {
+        
+        var second = msg.content.split(" ").slice(2);
+        let input = second.join(" ")
+
 
         if (msg.channel.type === "dm") {
             msg.channel.send(`This command must be run in a server.`)
