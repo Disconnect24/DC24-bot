@@ -1,44 +1,18 @@
-const fs = require("fs");
-const codes = JSON.parse(fs.readFileSync("./Settings/mail-db.json", "utf8"))
-
 module.exports = {
 
     run: function(bot, config, msg, args, suffix, Discord, color) {
 
-        if (msg.channel.type === "dm") {
-            msg.channel.send(`This command must be run in a server.`)
-            return;
+        if (suffix === "get") {
+            require(`./Commands/code-cmd/get.js`).run(bot, config, msg, args, suffix, Discord, color)
         }
-
-        let member = msg.mentions.members.first();
-
-        if (!member) {
-
-            if (!codes[msg.author.id]) {
-                msg.channel.send(`You aren't in the database.`)
-                return;
-            }
-
-            let embed = new Discord.RichEmbed()
-                .setTitle(`${msg.author.username}'s Wii Mail Code`)
-                .setDescription(`Code: ${codes[msg.author.id].code}`) 
-                .setColor(color)
-
-            msg.channel.send(embed)
-            return;
+        
+        if (suffix === "set") {
+            require(`./Commands/code-cmd/set.js`).run(bot, config, msg, args, suffix, Discord, color)
         }
-
-        if (!codes[member.id]) {
-            msg.channel.send(`This user isn't in the database.`)
-            return;
+        
+        if (suffix === "remove") {
+            require(`./Commands/code-cmd/remove.js`).run(bot, config, msg, args, suffix, Discord, color)
         }
-
-        let embed1 = new Discord.RichEmbed()
-            .setTitle(`${member.user.username}'s Wii Mail Code`)
-            .setDescription(`Code: ${codes[member.id].code}`) 
-            .setColor(color)
-
-        msg.channel.send(embed1)
 
     }
   
