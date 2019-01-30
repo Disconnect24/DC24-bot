@@ -28,10 +28,6 @@ bot.on('message', async function(msg) {
         require(`./Commands/patchers.js`).run(bot, config, msg, args, suffix, Discord, color)
     }
     
-    if (command === "guide") {
-        require(`./Commands/patchers.js`).run(bot, config, msg, args, suffix, Discord, color)
-    }
-
     if (command === "dns") {
         require(`./Commands/dns.js`).run(bot, config, msg, args, suffix, Discord, color)
     }
