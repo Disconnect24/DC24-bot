@@ -11,7 +11,7 @@ module.exports = {
             .addField(`Mail Patcher (Homebrew Channel)`, patchers.mailPatcher2)
             .addField(`Mail Patcher (Wii Menu Channel)`, patchers.mailPatcher3)
             .setColor(color)
-            .setFooter(`More patchers will be added as they are developed.`)
+            .setFooter(`Want help with your patching? Feel free to check https://guide.dc24.xyz.`)
 
         msg.author.send(embed)
         msg.react(`✅`)
