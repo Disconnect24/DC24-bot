@@ -8,11 +8,13 @@ module.exports = {
         let embed = new Discord.RichEmbed()
             .setTitle(`Disconnect24 Service Stats`)
             .setDescription(`Check Mii Out Channel: **${stats.cmoc}**\n
+            EULA: **${stats.eula}**\n
             Disconnect24 Channel: **${stats.dc24channel}**\n
             Everybody Votes Channel: **${stats.evc}**\n
             Forecast Channel: **${stats.fore}**\n
             Japanese Channels: **${stats.japan}**\n
             Mail: **${stats.mail}**\n
+            Animal Crossing Wii DLC: **${stats.accf}**\n
             Miiverse: **${stats.miiverse}**\n
             News Channel: **${stats.news}**\n
             Nintendo Channel: **${stats.nc}**\n
